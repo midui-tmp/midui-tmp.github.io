@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>Metalay</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>面包的主页</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: #fdf8f0;
+    color: #5b3a29;
+    line-height: 1.7;
+  }
+  header {
+    text-align: center;
+    padding: 56px 20px 32px;
+  }
+  header .paw { font-size: 44px; }
+  h1 { font-size: 42px; letter-spacing: 6px; margin: 8px 0 4px; }
+  header p { color: #a9805e; font-size: 17px; letter-spacing: 2px; }
+  .intro {
+    max-width: 640px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 17px;
+    color: #7a5a44;
+  }
+  .gallery {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 640px) {
+    .gallery { grid-template-columns: 1fr; }
+  }
+  figure {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(91, 58, 41, 0.12);
+  }
+  figure img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1040 / 1400;
+    object-fit: cover;
+  }
+  figcaption {
+    padding: 14px 18px 18px;
+    text-align: center;
+  }
+  figcaption b { font-size: 18px; display: block; }
+  figcaption span { color: #a9805e; font-size: 14px; }
+  footer {
+    text-align: center;
+    padding: 28px 20px 40px;
+    color: #b99b82;
+    font-size: 14px;
+  }
+</style>
 </head>
 <body>
-<p>Metalay — coming soon.</p>
+  <header>
+    <div class="paw">🐾</div>
+    <h1>面包</h1>
+    <p>一只棕色的泰迪犬</p>
+  </header>
+
+  <p class="intro">你好，我是面包。这里是我的小窝，收着我最喜欢的两张照片：一张在雪地里，一张在海边。</p>
+
+  <div class="gallery">
+    <figure>
+      <img src="images/snow.jpg" alt="雪地里的面包">
+      <figcaption><b>雪地里的面包</b><span>下雪天，裹着一身雪花</span></figcaption>
+    </figure>
+    <figure>
+      <img src="images/beach.jpg" alt="海边的面包">
+      <figcaption><b>海边的面包</b><span>晒着太阳，吹着海风</span></figcaption>
+    </figure>
+  </div>
+
+  <footer>面包的小窝 · metalay.loc.cc</footer>
 </body>
 </html>
